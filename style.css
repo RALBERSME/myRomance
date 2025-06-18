@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Grey Qo", cursive;
+}
+.wrapper {
+  height: 100%;
+  width: 100%;
+  background: url("https://cdn.pixabay.com/photo/2015/08/27/00/07/abstract-909245_640.jpg");
+  background-position: center/cover;
+  background-repeat: repeat;
+}
+
+.container {
+  text-align: center;
+  justify-content: center;
+  width: 95%;
+  margin: 2.5%;
+  margin-top: 2.5%;
+  height: 90%;
+}
+video {
+  height: 100%;
+}
+.info {
+  position: absolute;
+  top: 10%;
+  left: 0%;
+  font-size: 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  text-shadow: 2px 2px 2px rgb(250, 249, 228);
+  animation: changeText 12s 0s linear forwards;
+}
+@keyframes changeText {
+  0% {
+    top: 12%;
+    left: 0%;
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+  }
+  40% {
+    top: 12%;
+    left: 70%;
+    font-size: 3rem;
+    opacity: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+  }
+  60% {
+    top: 10%;
+    left: 70%;
+    font-size: 5rem;
+    opacity: 0;
+    font-size: 5rem;
+    font-family: "Grey Qo", cursive;
+    color: rgb(245, 76, 220);
+  }
+  100% {
+    top: 10%;
+    left: 17.5%;
+    font-size: 5rem;
+    font-family: "Grey Qo", cursive;
+    color: rgb(245, 76, 220);
+  }
+}
+
+img {
+  transform: translateX(525px) translateY(-178px) rotate(-22deg);
+  animation: hideFlower 9s 0s linear forwards;
+}
+@keyframes hideFlower {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#paw {
+  width: 210px;
+  height: 420px;
+  position: absolute;
+  left: -15%;
+  top: 50%;
+  transform: rotate(40deg) scale(1);
+  z-index: 2;
+  animation: getPaw 5s 16s linear forwards;
+}
+@keyframes getPaw {
+  from {
+    left: -15%;
+  }
+  to {
+    left: 15%;
+    transform: rotate(40deg) scale(16);
+  }
+}
