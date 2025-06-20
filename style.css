@@ -98,7 +98,7 @@ img {
   z-index: 2;
   animation: getPaw 5s 16s linear forwards;
 }
-@keyframes getPaws {
+@keyframes getPaw {
   from {
     left: -15%;
   }
@@ -108,30 +108,93 @@ img {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1280px) {
   .container {
-    /* text-align: center;
-    justify-content: center; */
-    /* width: 90%;
-    margin-right: 1.2%;
-    margin-top: 2.5%;
-    height: 90%; */
     background-color: rgba(0, 0, 0, 0.6);
   }
   video {
     height: 100%;
     width: 99%;
   }
-  /* .info {
+
+  @keyframes changeText {
+    0% {
+      top: 12%;
+      left: 0%;
+      font-size: 5rem;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+    }
+    40% {
+      top: 12%;
+      left: 70%;
+      font-size: 5rem;
+      opacity: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+    }
+    60% {
+      top: 10%;
+      left: 70%;
+      opacity: 0;
+      font-size: 5rem;
+      font-family: "Grey Qo", cursive;
+      color: rgb(245, 76, 220);
+    }
+    100% {
+      top: 12%;
+      left: 7%;
+      font-size: 5rem;
+      font-family: "Grey Qo", cursive;
+      color: rgb(245, 76, 220);
+    }
+  }
+
+  img {
+    transform: translateX(525px) translateY(-178px) rotate(-22deg);
+    animation: hideFlower 9s 0s linear forwards;
+  }
+  @keyframes hideFlower {
+    0% {
+      opacity: 0;
+    }
+    90% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  #paw {
+    width: 210px;
+    height: 420px;
     position: absolute;
-    top: 2%;
-    left: 0%;
-    font-size: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    text-shadow: 2px 2px 2px rgb(250, 249, 228);
+    left: -15%;
+    top: 50%;
+    transform: rotate(40deg) scale(1);
+    z-index: 2;
+    animation: getPaw 5s 16s linear forwards;
+  }
+  @keyframes getPaw {
+    from {
+      left: -15%;
+    }
+    to {
+      left: 15%;
+      transform: rotate(40deg) scale(16);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  video {
+    height: 100%;
+    width: 99%;
+  }
+  .info {
     animation: changeText 12s 0s linear forwards;
-  } */
+  }
   @keyframes changeText {
     0% {
       top: 12%;
@@ -158,26 +221,10 @@ img {
     }
     100% {
       top: 12%;
-      left: 7%;
+      left: 5%;
       font-size: 4.5rem;
       font-family: "Grey Qo", cursive;
       color: rgb(245, 76, 220);
-    }
-  }
-
-  img {
-    transform: translateX(525px) translateY(-178px) rotate(-22deg);
-    animation: hideFlower 9s 0s linear forwards;
-  }
-  @keyframes hideFlower {
-    0% {
-      opacity: 0;
-    }
-    90% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
     }
   }
 
